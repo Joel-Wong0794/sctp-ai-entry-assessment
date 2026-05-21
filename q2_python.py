@@ -3,8 +3,7 @@
 #
 # Task 1:
 # Declare an empty list called inventory to store item names as strings.
-
-# Add your code here
+inventory = []
 
 
 # Task 2:
@@ -14,8 +13,10 @@
 
 def addItem(itemName):
     # Add your code here
-    pass
-
+    if itemName in inventory:
+        print(f"{itemName} is already in inventory.")
+    else:
+        inventory.append(itemName)
 
 # Task 3:
 # Write a function called listInventory() that prints all items in the inventory.
@@ -23,8 +24,10 @@ def addItem(itemName):
 
 def listInventory():
     # Add your code here
-    pass
-
+    if inventory:
+        print("Inventory:", inventory)
+    else:
+        print("Inventory is empty.")
 
 # Task 4:
 # Call the functions in this order and observe the output:
